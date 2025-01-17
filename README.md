@@ -107,4 +107,3 @@ pnpm dev
 🤝 Contribuciones
 
 ¡Contribuciones son bienvenidas! Por favor, abre un issue o envía un pull request en este repositorio.
-# recipe-app
