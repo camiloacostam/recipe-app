@@ -1,0 +1,70 @@
+@use '../../../../shared/styles/variables.scss' as *;
+
+.hero {
+  width: 100%;
+  background-image: url('/images/banner.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 234px;
+  max-height: 416px;
+
+  /* Contenido del Hero */
+  &__content {
+    height: 100%;
+    width: 100%;
+    gap: 0;
+    color: #ffff;
+    padding: 134px 261px;
+    h1 {
+      margin-bottom: -55px;
+      font-weight: 300;
+      font-size: 74px;
+    }
+    h2 {
+      font-family: $monster-club;
+      font-weight: 400;
+      font-size: 67px;
+    }
+  }
+
+  /* Título principal */
+  &__title {
+    font-family: $poppins;
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .hero {
+      &__content {
+        padding: 51px 122px;
+
+        h1 {
+          margin-bottom: -55px;
+          font-weight: 300;
+          font-size: 74px;
+        }
+        h2 {
+          font-size: 67px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .hero {
+      &__content {
+        padding: 65px 56px;
+        h1 {
+          font-size: 40px;
+          margin-bottom: -30px;
+          font-weight: 300;
+        }
+        h2 {
+          font-size: 40px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

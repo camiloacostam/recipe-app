@@ -1,0 +1,32 @@
+@use '../../../shared/styles/variables.scss' as *;
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100%;
+
+  /* Main ocupa el espacio restante entre navbar y footer */
+  &__content {
+    flex: 1; /* Permite que el contenido ocupe todo el espacio disponible */
+    background-color: #f9f9f9;
+  }
+
+  &__footer {
+    background: transparent linear-gradient(180deg, #c2e3f3 0%, #6aa3c1 100%) 0%
+      0% no-repeat padding-box;
+    padding: 1rem 10rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 3.5rem;
+    color: $primary-gray;
+
+    .footer__sponsor {
+      font-weight: bold;
+
+      span {
+        color: #4caf50;
+      }
+    }
+  }
+}

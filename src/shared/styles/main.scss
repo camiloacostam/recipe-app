@@ -1,0 +1,41 @@
+@use 'sass:color';
+@use './variables' as *;
+
+//fuentes
+@font-face {
+  font-family: 'Monster ClubHouse';
+  src: url('/src/assets/fonts/MonsterClubhouse.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100vw;
+  font-family: $poppins;
+  font-size: 16px;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.5;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: color.adjust($primary-color, $lightness: -10%);
+  }
+}

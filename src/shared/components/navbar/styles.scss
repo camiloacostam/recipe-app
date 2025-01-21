@@ -1,0 +1,118 @@
+@use '../../styles/variables.scss' as *;
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 4.3rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__logo {
+    font-family: $monster-club;
+    font-size: 40px;
+
+    p {
+      color: $primary-gray;
+    }
+    span {
+      color: $primary-color;
+      font-family: $poppins;
+      font-size: 30px;
+    }
+  }
+
+  /* Estilos del menú en desktop */
+  &__links--desktop {
+    display: flex;
+    font-family: $poppins;
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 3.2rem;
+
+      li a {
+        text-decoration: none;
+        color: $primary-gray;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  /* Estilos del menú en mobile */
+  &__links--mobile {
+    display: none;
+
+    ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 1rem 0;
+
+      li {
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: #333;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+
+          span {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* Icono Home */
+  &__home-icon {
+    display: none;
+
+    a img {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  /* Responsividad */
+  @media (max-width: $breakpoint-tablet) {
+    padding: 1.25rem 2rem;
+
+    &__logo {
+      padding-left: 4.3rem;
+    }
+
+    &__links--desktop {
+      display: none; /* Esconde el menú desktop en mobile */
+    }
+
+    &__links--mobile {
+      display: block; /* Muestra el menú grid en mobile */
+    }
+
+    &__home-icon {
+      display: block; /* Muestra el icono de Home en mobile */
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 1.25rem 1rem;
+    &__logo {
+      padding-left: 2rem;
+    }
+  }
+}

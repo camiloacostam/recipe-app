@@ -1,0 +1,73 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background: transparent linear-gradient(180deg, #c2e3f3 0%, #6aa3c1 100%) 0%
+    0% no-repeat padding-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 52px 166px;
+  max-width: 100%;
+  position: relative;
+
+  /* Texto del footer */
+  &__text {
+    font-family: $monster-club;
+    font-size: 56px;
+    color: $text-color;
+  }
+
+  /* Contenedor de patrocinadores */
+  &__sponsors {
+    .footer__image {
+      position: absolute;
+      top: 41%;
+      left: 0;
+      transform: translateY(-50%);
+      max-width: 100%; /* Escalable */
+      max-height: 220px;
+      aspect-ratio: 16/9;
+      left: 50%;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 1.5rem 2.5rem;
+    .footer {
+      &__text {
+        font-size: 39px;
+      }
+
+      &__sponsors {
+        .footer__image {
+          position: absolute;
+          left: 50%;
+          top: -50%;
+          max-width: 100%; /* Escalable */
+          max-height: 167px;
+          aspect-ratio: 16/9;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 1.5rem 1rem;
+    .footer {
+      &__text {
+        font-size: 23px;
+      }
+
+      &__sponsors {
+        .footer__image {
+          position: absolute;
+          left: 50%;
+          top: -30%;
+          max-width: 100%; /* Escalable */
+          max-height: 105px;
+          aspect-ratio: 16/9;
+        }
+      }
+    }
+  }
+}
