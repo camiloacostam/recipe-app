@@ -1,4 +1,4 @@
-import { TCategory } from '../../types/category'
+import { TCategory } from '../../../../shared/types/category'
 import './styles.scss'
 
 interface ICategoriesProps {
@@ -10,8 +10,12 @@ export function Categories({ data }: ICategoriesProps) {
     <div className="categories">
       {data.map((category, index) => (
         <div key={index} className="categories__item">
-          <img src={category.icon} alt={category.name} />
-          <span>{category.name}</span>
+          <img
+            src={category.icon}
+            alt={category.name}
+            className="categories__icon"
+          />
+          <span className="categories__name">{category.name}</span>
         </div>
       ))}
     </div>
