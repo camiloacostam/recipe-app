@@ -1,6 +1,7 @@
 //components
 import { Hero } from '../../components/hero'
 import { Categories } from '../../components/categories'
+import { RecipesSlides } from '../../../recipes/components/recipes-slides'
 //utils
 import { categories } from '../../../../shared/utils/categories'
 //styles
@@ -12,6 +13,9 @@ export default function HomePage() {
       <Hero />
       <section className="home__categories">
         <Categories data={categories} />
+      </section>
+      <section className="home__recipes">
+        <RecipesSlides />
       </section>
     </div>
   )

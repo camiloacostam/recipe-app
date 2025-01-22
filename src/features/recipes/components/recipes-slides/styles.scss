@@ -1,0 +1,48 @@
+@use '../../../../shared/styles/variables.scss' as *;
+
+.recipes {
+  padding: 2rem;
+  margin-bottom: 3rem;
+
+  &__title {
+    font-family: $monster-club;
+    font-size: 54px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+
+    &__name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    &__rating {
+      font-size: 1rem;
+      color: $text-color;
+    }
+  }
+}
