@@ -14,6 +14,8 @@
   cursor: pointer;
   min-height: 277px;
   max-width: 266px;
+  width: 266px;
+  min-width: 266px;
 
   &:hover {
     transform: translateY(-5px);
@@ -66,8 +68,7 @@
     color: #f39c12; /* Color estrella */
   }
 
-  /* Responsividad para mobile */
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-mobile) {
     &__image-container {
       height: 120px;
     }
