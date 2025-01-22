@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { MainLayout } from './shared/components/main-layout'
 //Pages
 import HomePage from './features/home/pages/home-page'
+import { NotFoundPage } from './shared/components/not-found-page'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )
 }
