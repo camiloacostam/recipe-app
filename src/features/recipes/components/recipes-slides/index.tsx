@@ -12,8 +12,6 @@ export function RecipesSlides() {
     return <p>Cargando recetas...</p>
   }
 
-  console.log(recipes)
-
   return (
     <section className="recipes">
       <h2 className="recipes__title">Nuevas Recetas</h2>
